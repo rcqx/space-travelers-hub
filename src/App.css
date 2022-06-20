@@ -1,39 +1,71 @@
-.App {
+.missionContainer {
+  border: 1px solid lightgray;
+  margin: 2em;
+}
+
+.missionTable {
+  border-spacing: 0%;
+}
+
+th, td {
+  padding: 1em;
+  text-align: left;
+  border:  1px solid lightgray;
+}
+
+tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+span {
+  padding: 0.25em 1em;
+  border-radius: 0.5rem;
+  background-color: gray;
+  color: white;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+button {
+  padding: 0.5em 0.75em;
+  font-size: 0.95em;
+  border: 1px solid black;
+  border-radius: 0.35rem;
+  cursor: pointer;
+}
+
+.mainTh {
+  min-width: 6em;
+}
+
+.descriptionTh {
+  min-width: 25em;
+}
+
+.statusTh {
+  min-width: 9em;
+}
+
+.btnTh {
+  min-width: 8em;
+}
+
+.btnCell {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile-cont {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 5em;
 }
 
-.App-link {
-  color: #61dafb;
+.profile-cont div {
+  width: 40%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.profile-cont div ul {
+  padding: 0;
+  list-style-type: none;
 }
