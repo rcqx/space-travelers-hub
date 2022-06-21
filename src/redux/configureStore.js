@@ -1,19 +1,20 @@
-// import { combineReducers, configureStore, applyMiddleware } from '@reduxjs/toolkit';
-// import thunk from 'redux-thunk';
-// import reducerBooks, { fetchBooks } from './books/books';
-// import reducerStatus from './categories/categories';
+import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
+import thunk from 'redux-thunk';
+import reducerMissions, { fetchMissions } from './missions/missions';
+
+const rootReducer = reducerMissions;
 
 // const rootReducer = combineReducers({
 //   books: reducerBooks,
 //   status: reducerStatus,
 // });
 
-// const store = configureStore(
-//   { reducer: rootReducer },
-//   applyMiddleware(thunk),
-// );
+const store = configureStore(
+  { reducer: rootReducer },
+  applyMiddleware(thunk),
+);
 
-// store.subscribe(() => { store.getState(); });
-// store.dispatch(fetchBooks());
+store.subscribe(() => { store.getState(); });
+store.dispatch(fetchMissions());
 
-// export default store;
+export default store;
