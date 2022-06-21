@@ -66,3 +66,7 @@ button {
   padding: 0;
   list-style-type: none;
 }
+
+.tdTitle {
+  font-weight: bold;
+}
