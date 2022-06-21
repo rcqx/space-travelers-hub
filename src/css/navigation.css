@@ -1,0 +1,25 @@
+.navigation-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+  font-size: 2rem;
+  border: 1px solid #8e8e8e;
+  line-height: 7rem;
+}
+
+.logo-img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.rockets,
+.missions,
+.profile,
+.logo {
+  text-decoration: none;
+  color: green;
+}
+
+.missions {
+  margin: 0 1rem;
+}
