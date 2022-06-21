@@ -4,11 +4,7 @@ import reducerMissions, { fetchMissions } from './missions/missions';
 import rocketReducer from './rockets/rockets';
 import fetchRockets from './rockets/api';
 
-// const rootReducer = reducerMissions;
-
-const rootReducer = combineReducers({
-  missions: reducerMissions,
-});
+const rootReducer = reducerMissions;
 
 const store = configureStore({
   reducer: {
