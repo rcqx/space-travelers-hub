@@ -7,7 +7,7 @@ const fetchRockets = () => async (dispatch) => {
   fetchedData = fetchedData.map((rocket) => {
     const obj = {
       id: rocket.id,
-      flickr_images: rocket.flickr_images,
+      flickr_images: rocket.flickr_images[0],
       rocket_name: rocket.rocket_name,
       description: rocket.description,
     };
