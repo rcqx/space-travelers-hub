@@ -17,7 +17,7 @@ const Missions = () => {
         <tbody>
           {missions.map((item) => (
             <tr key={item.mission_id}>
-              <td>{item.mission_name}</td>
+              <td className="tdTitle">{item.mission_name}</td>
               <td>{item.description}</td>
               <td><span>NOT A MEMBER</span></td>
               <td className="btnCell"><button type="submit">Join Mission</button></td>
