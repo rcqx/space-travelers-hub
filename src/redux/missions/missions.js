@@ -1,15 +1,12 @@
-// actions
 const FETCH_API = 'space-travelers-hub/missions/FETCH_API';
 const UPDATE = 'space-travelers-hub/missions/UPDATE';
 const initialState = [];
 const baseMissionsUrl = 'https://api.spacexdata.com/v3/missions';
 
-// action creator
 export const updateReservation = (id) => (
   { type: UPDATE, payload: id }
 );
 
-// action creators with thunk
 export const fetchMissions = () => async (dispatch) => {
   const connect = await fetch(baseMissionsUrl);
   const res = await connect.json().then((dataObject) => (dataObject));
