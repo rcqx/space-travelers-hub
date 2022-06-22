@@ -13,6 +13,19 @@ const Profile = () => {
     return missionCounter;
   });
 
+  const rockets = useSelector((state) => state.rockets);
+  const rocketsArray = rockets;
+
+  const reservedRockets = rocketsArray.filter((rocket) => rocket.reserved === true);
+  let rocketCounter = 0;
+
+  rocketsArray.map((rocket) => {
+    if (rocket.reserved) {
+      rocketCounter += 1;
+    }
+    return rocketCounter;
+  });
+
   return (
     <div className="profile-cont">
       <div>
@@ -25,8 +38,10 @@ const Profile = () => {
       </div>
       <div>
         <h1>My Rockets</h1>
-        <ul className="rocketList">
-          No reservations yet...
+        <ul id="mList" className="missionList">
+          {rocketCounter > 0 ? reservedRockets.map((rocket) => (
+            <li className="missionItem" key={rocket.id}>{rocket.rocket_name}</li>
+          )) : <li style={{ border: 'none' }}>Here you will find your reserved Rockets</li>}
         </ul>
       </div>
     </div>
