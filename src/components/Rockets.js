@@ -1,9 +1,9 @@
+import Rocket from './Rocket';
+
 const Rockets = () => (
   <div>
-    <h1>ROCKETS</h1>
-    <p>Rocket information here</p>
+    <Rocket />
   </div>
-
 );
 
 export default Rockets;
