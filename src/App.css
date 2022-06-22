@@ -69,12 +69,19 @@ button {
 
 .tdTitle {
   font-weight: bold;
-}
-
-.leaveMissionBtn {
-  padding: 0.5em 0.75em;
-  font-size: 0.95em;
-  border: 1px solid green;
   border-radius: 0.35rem;
   cursor: pointer;
+}
+
+.missionItem {
+  width: 95%;
+  font-size: 1.5em;
+  background-color: whitesmoke;
+  padding: 0.5em;
+  border-bottom: 1px solid green;
+  box-shadow: 2px 2px 16px 1px rgba(0, 0, 0, 0.1);
+}
+
+#mList {
+  width: 80%;
 }
