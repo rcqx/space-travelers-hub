@@ -78,3 +78,7 @@ button {
   border-radius: 0.35rem;
   cursor: pointer;
 }
+
+.missionItem {
+  border: 1px solid black;
+}
