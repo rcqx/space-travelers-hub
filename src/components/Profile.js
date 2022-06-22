@@ -20,7 +20,7 @@ const Profile = () => {
         <ul id="mList" className="missionList">
           {missionCounter > 0 ? reservedMissions.map((item) => (
             <li className="missionItem" key={item.mission_id}>{item.mission_name}</li>
-          )) : <li>Here you will find your reserved missions</li>}
+          )) : <li style={{ border: 'none' }}>Here you will find your reserved missions</li>}
         </ul>
       </div>
       <div>

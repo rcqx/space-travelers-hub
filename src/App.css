@@ -74,13 +74,14 @@ button {
 }
 
 .missionItem {
-  width: 100%;
+  width: 95%;
   font-size: 1.5em;
   background-color: whitesmoke;
   padding: 0.5em;
+  border-bottom: 1px solid green;
+  box-shadow: 2px 2px 16px 1px rgba(0, 0, 0, 0.1);
 }
 
 #mList {
   width: 80%;
-  border: 2px solid green;
 }
