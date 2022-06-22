@@ -3,13 +3,13 @@ import { useSelector } from 'react-redux';
 const Profile = () => {
   const getMissions = useSelector((state) => state.missions);
   const missions = getMissions;
+  const reservedMissions = missions.filter((item) => item.reserved === true);
   let missionCounter = 0;
 
   missions.map((item) => {
     if (item.reserved) {
       missionCounter += 1;
     }
-    console.log(missionCounter);
     return missionCounter;
   });
 
@@ -18,8 +18,8 @@ const Profile = () => {
       <div>
         <h1>My Missions</h1>
         <ul id="mList" className="missionList">
-          {missionCounter > 0 ? missions.map((item) => (
-            <li className="missionItem" key={item.mission_id}>{item.reserved && item.mission_name}</li>
+          {missionCounter > 0 ? reservedMissions.map((item) => (
+            <li className="missionItem" key={item.mission_id}>{item.mission_name}</li>
           )) : <li>Here you will find your reserved missions</li>}
         </ul>
       </div>
