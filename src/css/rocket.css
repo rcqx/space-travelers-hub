@@ -10,3 +10,23 @@
   width: 16rem;
   margin-right: 1.5rem;
 }
+
+.reserve-badge {
+  background-color: green;
+  padding-bottom: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.rocket-description {
+  font-size: 1.2rem;
+}
+
+.reserve-btn {
+  background-color: blue;
+  color: #fff;
+  border: #fff;
+}
+
+.cancel-btn {
+  background-color: red;
+}
