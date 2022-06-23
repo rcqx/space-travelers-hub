@@ -28,5 +28,12 @@ describe('Testing the Missions component', () => {
       expect(screen.getAllByText('Join mission').length).toBeGreaterThanOrEqual(10);
     });
   });
+
+  test('Main table headers are rendering properly', async () => {
+    render(<Provider store={store}><Missions /></Provider>);
+    await waitFor(() => {
+      expect(screen.getByText('Missions') && screen.getByText('Description') && screen.getByText('Status')).toBeTruthy();
+    });
+  });
 });
 
