@@ -4,28 +4,32 @@ import {
 import { Provider } from 'react-redux';
 import store from '../redux/configureStore';
 import Profile from '../components/Profile'
+import Missions from '../components/Missions'
 
 describe('Testing the Missions component', () => {
-  const FETCH_API = 'space-travelers-hub/missions/FETCH_API';
-  const baseMissionsUrl = 'https://api.spacexdata.com/v3/missions';
 
-  // populate redux store before each test
-  beforeEach(async () => {
-    await fetch(baseMissionsUrl).then(data => data.json());
-  });
-
-  // Erase fetched data from redux store after each test
-  afterEach(() => {
-    act(() => store.dispatch({
-      type: FETCH_API,
-      payload: [],
-    }));
-  });
-
-  test('On first load no saved missions appear on profile section', async () => {
+  test('On first load no saved missions appear on profile section', () => {
     render(<Provider store={store}><Profile /></Provider>);
+    expect(screen.findByText('Here you will find your reserved missions')).toBeTruthy();
+  });
+
+  test('On first load no saved rockets appear on profile section', () => {
+    render(<Provider store={store}><Profile /></Provider>);
+    expect(screen.findByText('Here you will find your reserved rockets')).toBeTruthy();
+  });
+
+  test('Clicking on first "Join mission" button in the missions page enable, thus this will render mission on profile page, ', async () => {
+    render(<Provider store={store}><Missions /></Provider>);
     await waitFor(() => {
-      expect(screen.findByText('Here you will find your reserved missions')).toBeTruthy();
+      expect(fireEvent.click((screen.getAllByText('Join mission')[0]))).toBeTruthy();
+    });
+  });
+
+  test('Clicking on random "Join mission" button in the missions page enable, thus this will render mission on profile page, ', async () => {
+    render(<Provider store={store}><Missions /></Provider>);
+    await waitFor(() => {
+      expect(fireEvent.click((screen.getAllByText('Join mission')[Math.floor(Math.random() * 10) + 1]))).toBeTruthy();
     });
   });
 });
+
