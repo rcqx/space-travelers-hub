@@ -15,8 +15,7 @@
 
 ## Built With
 
-- Javascript![cover_img](./src/img/cover.png)
-
+- Javascript
 - create-react-app
 - React Router
 - React Testing Library 
