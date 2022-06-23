@@ -8,10 +8,13 @@ import Missions from '../components/Missions'
 describe('Testing the Missions component', () => {
   const FETCH_API = 'space-travelers-hub/missions/FETCH_API';
   const baseMissionsUrl = 'https://api.spacexdata.com/v3/missions';
+
+  // populate redux store before each test
   beforeEach(async () => {
     await fetch(baseMissionsUrl);
   });
 
+  // Erase fetched data from redux store after each test
   afterEach(() => {
     act(() => store.dispatch({
       type: FETCH_API,
@@ -19,7 +22,7 @@ describe('Testing the Missions component', () => {
     }));
   });
 
-  test('Missions are rendering succesfully', async () => {
+  test('All 10 missions are rendering succesfully', async () => {
     render(<Provider store={store}><Missions /></Provider>);
     await waitFor(() => {
       expect(screen.getAllByText('Join mission').length).toBeGreaterThanOrEqual(10);
