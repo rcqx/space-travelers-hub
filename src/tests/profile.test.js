@@ -1,13 +1,12 @@
 import {
-  render, screen, waitFor, fireEvent, act,
+  render, screen, waitFor, fireEvent,
 } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from '../redux/configureStore';
-import Profile from '../components/Profile'
-import Missions from '../components/Missions'
+import Profile from '../components/Profile';
+import Missions from '../components/Missions';
 
 describe('Testing the Missions component', () => {
-
   test('On first load no saved missions appear on profile section', () => {
     render(<Provider store={store}><Profile /></Provider>);
     expect(screen.findByText('Here you will find your reserved missions')).toBeTruthy();
@@ -32,4 +31,3 @@ describe('Testing the Missions component', () => {
     });
   });
 });
-

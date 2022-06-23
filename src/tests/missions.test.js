@@ -1,19 +1,11 @@
-import { waitFor, screen, act, render, fireEvent, } from '@testing-library/react';
+import {
+  waitFor, screen, render, fireEvent,
+} from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from '../redux/configureStore';
 import Missions from '../components/Missions';
 
 describe('Testing the Missions component', () => {
-  // const FETCH_API = 'space-travelers-hub/missions/FETCH_API';
-
-  // // Erase fetched data from redux store after each test
-  // afterEach(() => {
-  //   act(() => store.dispatch({
-  //     type: FETCH_API,
-  //     payload: [],
-  //   }));
-  // });
-
   test('When data fetched from API all 10 missions are rendering succesfully', async () => {
     render(<Provider store={store}><Missions /></Provider>);
     await waitFor(() => {
@@ -39,5 +31,4 @@ describe('Testing the Missions component', () => {
       expect(fireEvent.click(screen.getAllByText('Join mission')[0])).toBeTruthy();
     });
   });
-
 });
