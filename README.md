@@ -11,10 +11,11 @@
 - Uses React Testing Library.
 - Uses Redux store, actions and reducers in React.
 
+![cover_img](./src/img/cover.png)
+
 ## Built With
 
 - Javascript
-- HTML&CSS
 - create-react-app
 - React Router
 - React Testing Library 
@@ -22,8 +23,7 @@
 
 ## See it live
 
-- [heroku deployment]()
-- [netlify deploymebt]()
+- [CHECK IT LIVE ON NETLIFY](https://space-travelers-alpha-jose.netlify.app)
 
 ## Getting Started
 
@@ -44,8 +44,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Run tests
 
-- Run `npm tets` to jest test results
-
+- Run `npm test` to jest test results
 
 ## Authors
 
@@ -57,18 +56,16 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Author**
 
-- GitHub: 
-- Twitter: 
-- LinkedIn: 
+- GitHub: [@githubhandle](https://github.com/AlphaNtihinduka)
+- Twitter: [@twitterhandle](https://twitter.com/@alphantihinduka)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ntihinduka-alpha-81bb7b22a/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
-
-## Show your support
-
+https://space-travelers-alpha-jose.netlify.app/rockets
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
