@@ -1,0 +1,2 @@
+export const SET_ROCKETS = 'SET_ROCKETS';
+export const RESERVE_ROCKET = 'RESERVE_ROCKET';
