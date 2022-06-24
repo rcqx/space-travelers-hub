@@ -23,7 +23,7 @@
 
 ## See it live
 
-- [CHECK IT LIVE ON NETLIFY](https://space-travelers-alpha-jose.netlify.app/rockets)
+- [CHECK IT LIVE ON NETLIFY](https://space-travelers-alpha-jose.netlify.app)
 
 ## Getting Started
 
