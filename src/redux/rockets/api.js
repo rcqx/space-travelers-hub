@@ -1,5 +1,3 @@
-// import { RESERVE_ROCKET, SET_ROCKETS } from './actiontypes';
-// import * as actions from './actiontypes';
 export const SET_ROCKETS = 'SET_ROCKETS';
 export const RESERVE_ROCKET = 'RESERVE_ROCKET';
 
